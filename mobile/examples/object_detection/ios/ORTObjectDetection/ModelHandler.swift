@@ -238,10 +238,15 @@ class ModelHandler: NSObject {
             rect.origin.x = CGFloat(detectionBoxes[4 * i + 1])
             rect.size.height = CGFloat(detectionBoxes[4 * i + 2]) - rect.origin.y
             rect.size.width = CGFloat(detectionBoxes[4 * i + 3]) - rect.origin.x
+            //rect.origin.y = CGFloat(detectionBoxes[4 * i + 2])
+            //rect.origin.x = CGFloat(detectionBoxes[4 * i + 1])
+            //rect.size.height = CGFloat(detectionBoxes[4 * i]) - rect.origin.y
+            //rect.size.width = CGFloat(detectionBoxes[4 * i + 3]) - rect.origin.x
+            
             
             let newRect = rect.applying(CGAffineTransform(scaleX: width, y: height))
             
-            let colorToAssign = colorForClass(withIndex: detectionClassIndex + 1)
+            let colorToAssign = colorForClass(withIndex: detectionClassIndex - 1)
             let inference = Inference(score: score,
                                       className: detectionClass,
                                       rect: newRect,
