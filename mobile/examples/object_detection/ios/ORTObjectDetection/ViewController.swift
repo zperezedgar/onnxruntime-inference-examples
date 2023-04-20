@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     
     // Handle all model and data preprocessing and run inference
     private var modelHandler: ModelHandler? = ModelHandler(
-        modelFileInfo: (name: "ssd_mobilenet_v1", extension: "ort"),
+        modelFileInfo: (name: "EfficientDetD1_V1_640px", extension: "ort"),
         labelsFileInfo: (name: "labelmap", extension: "txt"))
     
     // MARK: View Controller Life Cycle

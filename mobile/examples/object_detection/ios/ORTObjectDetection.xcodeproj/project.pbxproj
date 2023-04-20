@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E64B72128F7656400A55A0B /* ssd_mobilenet_v1.ort in Resources */ = {isa = PBXBuildFile; fileRef = 2E64B72028F7656400A55A0B /* ssd_mobilenet_v1.ort */; };
 		5182220826793930003B00DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5182220726793930003B00DB /* Main.storyboard */; };
-		5182220A2679440C003B00DB /* labelmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = 518222092679440B003B00DB /* labelmap.txt */; };
 		5182220C26795576003B00DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5182220B26795576003B00DB /* SceneDelegate.swift */; };
 		51A25D44266E9C3C0087C801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A25D43266E9C3C0087C801 /* AppDelegate.swift */; };
 		51A25D48266E9C3C0087C801 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A25D47266E9C3C0087C801 /* ViewController.swift */; };
@@ -21,7 +19,11 @@
 		51A25D64266EA7460087C801 /* ModelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A25D63266EA7460087C801 /* ModelHandler.swift */; };
 		51A25D66266EA7AE0087C801 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A25D65266EA7AE0087C801 /* CameraManager.swift */; };
 		51A25D6926715ECD0087C801 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A25D6826715ECD0087C801 /* OverlayView.swift */; };
+		CF67073533799522B34E9BF7 /* Pods_ORTObjectDetectionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F636B966969606A3C6AFD6F /* Pods_ORTObjectDetectionTests.framework */; };
+		E345D138DCF27977EC143C79 /* Pods_ORTObjectDetection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D2DB60B07329515B16FF61 /* Pods_ORTObjectDetection.framework */; };
 		EF2E2B1E26FAAD93005C8A04 /* ORTObjectDetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E2B1D26FAAD93005C8A04 /* ORTObjectDetectionTests.swift */; };
+		FA7BDCE929F1E1DE0027B536 /* labelmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA7BDCE829F1E1DE0027B536 /* labelmap.txt */; };
+		FA7BDCEC29F1E8C30027B536 /* EfficientDetD1_V1_640px.ort in Resources */ = {isa = PBXBuildFile; fileRef = FA7BDCE729F1E16C0027B536 /* EfficientDetD1_V1_640px.ort */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2E64B72028F7656400A55A0B /* ssd_mobilenet_v1.ort */ = {isa = PBXFileReference; lastKnownFileType = file; path = ssd_mobilenet_v1.ort; sourceTree = "<group>"; };
+		03D2DB60B07329515B16FF61 /* Pods_ORTObjectDetection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORTObjectDetection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A5E7304E6C560CCE75EC7CE /* Pods-ORTObjectDetection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORTObjectDetection.release.xcconfig"; path = "Target Support Files/Pods-ORTObjectDetection/Pods-ORTObjectDetection.release.xcconfig"; sourceTree = "<group>"; };
+		0F636B966969606A3C6AFD6F /* Pods_ORTObjectDetectionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORTObjectDetectionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		432DF2A0329FAF97304B98CE /* Pods-ORTObjectDetection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORTObjectDetection.debug.xcconfig"; path = "Target Support Files/Pods-ORTObjectDetection/Pods-ORTObjectDetection.debug.xcconfig"; sourceTree = "<group>"; };
 		5182220726793930003B00DB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		518222092679440B003B00DB /* labelmap.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labelmap.txt; sourceTree = "<group>"; };
 		5182220B26795576003B00DB /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		51A25D40266E9C3C0087C801 /* ORTObjectDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ORTObjectDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A25D43266E9C3C0087C801 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,9 +56,13 @@
 		51A25D65266EA7AE0087C801 /* CameraManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		51A25D67267137B70087C801 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		51A25D6826715ECD0087C801 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		67B3760CFD594E2878E3050F /* Pods-ORTObjectDetectionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORTObjectDetectionTests.debug.xcconfig"; path = "Target Support Files/Pods-ORTObjectDetectionTests/Pods-ORTObjectDetectionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB6716B08BB77C8B45050DA5 /* Pods-ORTObjectDetectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORTObjectDetectionTests.release.xcconfig"; path = "Target Support Files/Pods-ORTObjectDetectionTests/Pods-ORTObjectDetectionTests.release.xcconfig"; sourceTree = "<group>"; };
 		EF2E2B1B26FAAD93005C8A04 /* ORTObjectDetectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ORTObjectDetectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF2E2B1D26FAAD93005C8A04 /* ORTObjectDetectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORTObjectDetectionTests.swift; sourceTree = "<group>"; };
 		EF2E2B1F26FAAD93005C8A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA7BDCE729F1E16C0027B536 /* EfficientDetD1_V1_640px.ort */ = {isa = PBXFileReference; lastKnownFileType = file; path = EfficientDetD1_V1_640px.ort; sourceTree = "<group>"; };
+		FA7BDCE829F1E1DE0027B536 /* labelmap.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labelmap.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E345D138DCF27977EC143C79 /* Pods_ORTObjectDetection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF67073533799522B34E9BF7 /* Pods_ORTObjectDetectionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +92,7 @@
 				EF2E2B1C26FAAD93005C8A04 /* ORTObjectDetectionTests */,
 				51A25D41266E9C3C0087C801 /* Products */,
 				ADE614CCAFBAB253A7AF155D /* Pods */,
+				D5E87B20BE52DE019D7AD866 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,8 +138,8 @@
 		51A25D5C266EA0030087C801 /* ModelsAndData */ = {
 			isa = PBXGroup;
 			children = (
-				2E64B72028F7656400A55A0B /* ssd_mobilenet_v1.ort */,
-				518222092679440B003B00DB /* labelmap.txt */,
+				FA7BDCE729F1E16C0027B536 /* EfficientDetD1_V1_640px.ort */,
+				FA7BDCE829F1E1DE0027B536 /* labelmap.txt */,
 			);
 			path = ModelsAndData;
 			sourceTree = "<group>";
@@ -136,8 +147,21 @@
 		ADE614CCAFBAB253A7AF155D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				432DF2A0329FAF97304B98CE /* Pods-ORTObjectDetection.debug.xcconfig */,
+				0A5E7304E6C560CCE75EC7CE /* Pods-ORTObjectDetection.release.xcconfig */,
+				67B3760CFD594E2878E3050F /* Pods-ORTObjectDetectionTests.debug.xcconfig */,
+				CB6716B08BB77C8B45050DA5 /* Pods-ORTObjectDetectionTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D5E87B20BE52DE019D7AD866 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03D2DB60B07329515B16FF61 /* Pods_ORTObjectDetection.framework */,
+				0F636B966969606A3C6AFD6F /* Pods_ORTObjectDetectionTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EF2E2B1C26FAAD93005C8A04 /* ORTObjectDetectionTests */ = {
@@ -156,6 +180,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51A25D54266E9C3E0087C801 /* Build configuration list for PBXNativeTarget "ORTObjectDetection" */;
 			buildPhases = (
+				DC193021F9C2DFDC0C3B4FDA /* [CP] Check Pods Manifest.lock */,
 				51A25D3C266E9C3C0087C801 /* Sources */,
 				51A25D3D266E9C3C0087C801 /* Frameworks */,
 				51A25D3E266E9C3C0087C801 /* Resources */,
@@ -173,6 +198,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF2E2B2426FAAD93005C8A04 /* Build configuration list for PBXNativeTarget "ORTObjectDetectionTests" */;
 			buildPhases = (
+				4A7231C5910CE0D053CB98BA /* [CP] Check Pods Manifest.lock */,
 				EF2E2B1726FAAD93005C8A04 /* Sources */,
 				EF2E2B1826FAAD93005C8A04 /* Frameworks */,
 				EF2E2B1926FAAD93005C8A04 /* Resources */,
@@ -229,9 +255,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7BDCEC29F1E8C30027B536 /* EfficientDetD1_V1_640px.ort in Resources */,
+				FA7BDCE929F1E1DE0027B536 /* labelmap.txt in Resources */,
 				51A25D5A266E9CA60087C801 /* LaunchScreen.storyboard in Resources */,
-				5182220A2679440C003B00DB /* labelmap.txt in Resources */,
-				2E64B72128F7656400A55A0B /* ssd_mobilenet_v1.ort in Resources */,
 				5182220826793930003B00DB /* Main.storyboard in Resources */,
 				51A25D4D266E9C3E0087C801 /* Assets.xcassets in Resources */,
 			);
@@ -245,6 +271,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A7231C5910CE0D053CB98BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ORTObjectDetectionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC193021F9C2DFDC0C3B4FDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ORTObjectDetection-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		51A25D3C266E9C3C0087C801 /* Sources */ = {
@@ -400,11 +473,12 @@
 		};
 		51A25D55266E9C3E0087C801 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 432DF2A0329FAF97304B98CE /* Pods-ORTObjectDetection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBF8T346G9;
+				DEVELOPMENT_TEAM = 87LWHUJ6LJ;
 				INFOPLIST_FILE = ORTObjectDetection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -420,11 +494,12 @@
 		};
 		51A25D56266E9C3E0087C801 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A5E7304E6C560CCE75EC7CE /* Pods-ORTObjectDetection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBF8T346G9;
+				DEVELOPMENT_TEAM = 87LWHUJ6LJ;
 				INFOPLIST_FILE = ORTObjectDetection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,6 +515,7 @@
 		};
 		EF2E2B2226FAAD93005C8A04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67B3760CFD594E2878E3050F /* Pods-ORTObjectDetectionTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -460,6 +536,7 @@
 		};
 		EF2E2B2326FAAD93005C8A04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB6716B08BB77C8B45050DA5 /* Pods-ORTObjectDetectionTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

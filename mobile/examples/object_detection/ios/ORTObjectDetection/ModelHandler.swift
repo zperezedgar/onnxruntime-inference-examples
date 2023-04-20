@@ -21,6 +21,7 @@ import CoreImage
 import Darwin
 import Foundation
 import UIKit
+import onnxruntime_objc
 
 // Result struct
 struct Result {
@@ -54,8 +55,8 @@ class ModelHandler: NSObject {
 
     let batchSize = 1
     let inputChannels = 3
-    let inputWidth = 300
-    let inputHeight = 300
+    let inputWidth = 640
+    let inputHeight = 640
     
     private let colors = [
         UIColor.red,
@@ -128,7 +129,7 @@ class ModelHandler: NSObject {
         
         let interval: TimeInterval
         
-        let inputName = "normalized_input_image_tensor"
+        let inputName = "input_tensor"
         
         guard let rgbData = rgbDataFromBuffer(
             scaledPixelBuffer,
@@ -149,39 +150,39 @@ class ModelHandler: NSObject {
         // Run ORT InferenceSession
         let startDate = Date()
         let outputs = try session.run(withInputs: [inputName: inputTensor],
-                                      outputNames: ["TFLite_Detection_PostProcess",
-                                                    "TFLite_Detection_PostProcess:1",
-                                                    "TFLite_Detection_PostProcess:2",
-                                                    "TFLite_Detection_PostProcess:3"],
+                                      outputNames: ["detection_boxes",
+                                                    "detection_classes",
+                                                    "detection_scores",
+                                                    "num_detections"],
                                       runOptions: nil)
         interval = Date().timeIntervalSince(startDate) * 1000
         
-        guard let rawOutputValue = outputs["TFLite_Detection_PostProcess"] else {
-            throw OrtModelError.error("failed to get model output_0")
+        guard let rawOutputValue = outputs["detection_boxes"] else {
+            throw OrtModelError.error("failed to get model detection_boxes")
         }
         let rawOutputData = try rawOutputValue.tensorData() as Data
         guard let outputArr: [Float32] = Array(unsafeData: rawOutputData) else {
             return nil
         }
         
-        guard let rawOutputValue_1 = outputs["TFLite_Detection_PostProcess:1"] else {
-            throw OrtModelError.error("failed to get model output_1")
+        guard let rawOutputValue_1 = outputs["detection_classes"] else {
+            throw OrtModelError.error("failed to get model detection_classes")
         }
         let rawOutputData_1 = try rawOutputValue_1.tensorData() as Data
         guard let outputArr_1: [Float32] = Array(unsafeData: rawOutputData_1) else {
             return nil
         }
         
-        guard let rawOutputValue_2 = outputs["TFLite_Detection_PostProcess:2"] else {
-            throw OrtModelError.error("failed to get model output_2")
+        guard let rawOutputValue_2 = outputs["detection_scores"] else {
+            throw OrtModelError.error("failed to get model detection_scores")
         }
         let rawOutputData_2 = try rawOutputValue_2.tensorData() as Data
         guard let outputArr_2: [Float32] = Array(unsafeData: rawOutputData_2) else {
             return nil
         }
         
-        guard let rawOutputValue_3 = outputs["TFLite_Detection_PostProcess:3"] else {
-            throw OrtModelError.error("failed to get model output_3")
+        guard let rawOutputValue_3 = outputs["num_detections"] else {
+            throw OrtModelError.error("failed to get model num_detections")
         }
         let rawOutputData_3 = try rawOutputValue_3.tensorData() as Data
         guard let outputArr_3: [Float32] = Array(unsafeData: rawOutputData_3) else {
@@ -227,7 +228,8 @@ class ModelHandler: NSObject {
             }
             
             let detectionClassIndex = Int(detectionClasses[i])
-            let detectionClass = labels[detectionClassIndex + 1]
+            //let detectionClass = labels[detectionClassIndex + 1]
+            let detectionClass = labels[detectionClassIndex - 1]
             
             var rect = CGRect.zero
             
